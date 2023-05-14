@@ -14,8 +14,8 @@ const theme = {
     secondaryDarkText:'#fdfdfd',
     
     otherLight:'#fdfdfd',
-    other:'#e6e6e6',
-    otherDark:'#8a8a8a',
+    other:'#e4e4e4',
+    otherDark:'#c8c8c8',
 }
 
 export default theme;

@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
 import SideBar from './Components/SideBar';
-import theme from './Theme/theme';
 import Content from './Content';
 import Schedule from './Schedule';
 import VDSO from './VDSO';
@@ -57,7 +56,7 @@ function ResponsiveDrawer(props) {
             />
             <Box
                 component="main"
-                sx={{ flexGrow: 1, p: 3, background: theme.otherLight, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
+                sx={{ flexGrow: 1, p: 3, background: '#f2f2f2', width: { sm: `calc(100% - ${drawerWidth}px)` } }}
             >
                 <BrowserRouter>
                     <Routes>
