@@ -18,53 +18,82 @@ export default function sideBar(props) {
 
     console.log(theme.primary);
     const drawer = (
-        <div style={theme.secondary}>
+        <div>
             <div style={{ padding: '18px' }}>
                 <Box sx={{padding: '32px 0px'}}>
                     <center>
                     <OndemandVideoIcon style={{ fontSize: '36px' }}/>
                     </center>
                 </Box>
-                <Divider />
+                <Divider sx={{background: theme.other }}/>
                 <List>
                     <ListItem key={"Dashboard"} disablePadding>
                         <ListItemButton 
-                            style={theme.secondary}
-                            sx={{ borderRadius:'8px 0px 0px 8px', transitionDuration:'0.3s', borderRight: 5}}
+                            sx={{ borderRadius:'8px', transitionDuration:'0.3s', mt:3,
+                                '&:hover': {
+                                    cursor: 'pointer',
+                                    background:theme.secondaryLight,
+                                }
+                            }}
+                            onClick={() => window.location.replace("/Dashboard", "_self")}
                         >
                             <ListItemIcon>
-                                <DashboardIcon />
+                                <DashboardIcon sx={{color: theme.other }}/>
                             </ListItemIcon>
                             <ListItemText primary={"Dashboard"} />
                         </ListItemButton>
                     </ListItem>
                     <ListItem key={"Content"} disablePadding>
-                        <ListItemButton style={{borderRadius:'8px', transitionDuration:'0.3s'}}>
+                        <ListItemButton 
+                            sx={{ borderRadius:'8px', transitionDuration:'0.3s', mt:1,
+                                '&:hover': {
+                                    cursor: 'pointer',
+                                    background:theme.secondaryLight,
+                                }
+                            }}
+                            onClick={() => window.location.replace("/Content", "_self")}
+                        >
                             <ListItemIcon>
-                                <VideoCameraBackIcon />
+                                <VideoCameraBackIcon sx={{color: theme.other }}/>
                             </ListItemIcon>
                             <ListItemText primary={"Content"} />
                         </ListItemButton>
                     </ListItem>
                     <ListItem key={"Schedule"} disablePadding>
-                        <ListItemButton style={{borderRadius:'8px', transitionDuration:'0.3s'}}>
+                        <ListItemButton 
+                            sx={{ borderRadius:'8px', transitionDuration:'0.3s', mt:1,
+                                '&:hover': {
+                                    cursor: 'pointer',
+                                    background:theme.secondaryLight,
+                                }
+                            }}
+                            onClick={() => window.location.replace("/Schedule", "_self")}
+                        >
                             <ListItemIcon>
-                                <ScheduleSendIcon />
+                                <ScheduleSendIcon sx={{color: theme.other }} />
                             </ListItemIcon>
                             <ListItemText primary={"Schedule"} />
                         </ListItemButton>
                     </ListItem>
                     <ListItem key={"VDSO"} disablePadding>
-                        <ListItemButton style={{borderRadius:'8px', transitionDuration:'0.3s'}}>
+                        <ListItemButton 
+                            sx={{ borderRadius:'8px', transitionDuration:'0.3s', mt:1, mb:2,
+                                '&:hover': {
+                                    cursor: 'pointer',
+                                    background:theme.secondaryLight,
+                                }
+                            }}
+                            onClick={() => window.location.replace("/VDSO", "_self")}
+                        >
                             <ListItemIcon>
-                                <TvIcon />
+                                <TvIcon sx={{color: theme.other }}/>
                             </ListItemIcon>
                             <ListItemText primary={"VDSO"} />
                         </ListItemButton>
                     </ListItem>
 
                 </List>
-                <Divider />
+                <Divider sx={{background: theme.other }}/>
             </div>
         </div>
     );
@@ -74,6 +103,7 @@ export default function sideBar(props) {
             component="nav"
             sx={{ width: { sm: props.drawerWidth }, flexShrink: { sm: 0 } }}
             aria-label="mailbox folders"
+            // style={{backgroundColor: theme.secondary}}
         >
             <Drawer
                 container={props.container}
@@ -92,9 +122,11 @@ export default function sideBar(props) {
             </Drawer>
             <Drawer
                 variant="permanent"
+                style={{backgroundColor: theme.secondary}}
                 sx={{
                     display: { xs: 'none', sm: 'block' },
-                    '& .MuiDrawer-paper': { boxSizing: 'border-box', width: props.drawerWidth },
+                    backgroundColor:theme.secondary,
+                    '& .MuiDrawer-paper': { boxSizing: 'border-box', width: props.drawerWidth, backgroundColor: theme.secondary, color: theme.other },
                 }}
                 open
             >

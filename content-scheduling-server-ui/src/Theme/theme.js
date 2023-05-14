@@ -1,45 +1,21 @@
 const theme = {
-    primaryLight: {
-        backgroundColor:'#c679f6',
-        color:'#fdfdfd',
-    },
+    primaryLight:'#c679f6',
+    primaryLightText: '#fdfdfd',
+    primary:'#a020f0',
+    primaryText:'#fdfdfd',
+    primaryDark:'#720cb1',
+    primaryDarkText:'#fdfdfd',
+
+    secondaryLight:'#404040',
+    secondaryLightText:'#fdfdfd',
+    secondary:'#333333',
+    secondaryText:'#fdfdfd',
+    secondaryDark: '#1a1a1a',
+    secondaryDarkText:'#fdfdfd',
     
-    primary: {
-        backgroundColor:'#a020f0',
-        color:'#fdfdfd',
-    },
-    
-    primaryDark: {
-        backgroundColor:'#720cb1',
-        color:'#fdfdfd',
-    },
-    
-    secondaryLight: {
-        backgroundColor:'#5c5c5c',
-        color:'#fdfdfd',
-    },
-    
-    secondary: {
-        backgroundColor:'#333333',
-        color:'#fdfdfd',
-    },
-    
-    secondaryDark: {
-        backgroundColor:'#1a1a1a',
-        color:'#fdfdfd',
-    },
-    
-    otherLight: {
-        backgroundColor:'#fdfdfd',
-    },
-    
-    other: {
-        backgroundColor:'#e6e6e6',
-    },
-    
-    otherDark: {
-        backgroundColor:'#8a8a8a',
-    },
+    otherLight:'#fdfdfd',
+    other:'#e6e6e6',
+    otherDark:'#8a8a8a',
 }
 
 export default theme;
